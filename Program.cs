@@ -1,39 +1,19 @@
-﻿using System;
-class Program
-{
-    static void Main(string[] args)
+using System;
+
+public class Program
     {
-        Console.WriteLine("Do you want to roll the dice y/n");
-        string choice = Console.ReadLine();
-
-        while (true)
+        static void Main(string[] args)
         {
-            if (choice == "y")
-            {
-                int y = new Random().Next(1, 7);
+        int choice;
+            Console.WriteLine("Welcome to our game guess the number 1-10 and win a prize");
+            int y = new Random().Next(1, 11);
+            choice = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Number rolled - " + y + " Do you want to play again y/n");
-
-                string choice2 = Console.ReadLine();
-
-                    if (choice2 == "y")
-                    {
-
-                    }
-
-                    if (choice2 == "n")
-                    {
-                    Environment.Exit(0);
-                    }
-            }
-
-            if (choice == "n")
-            {
-                Environment.Exit(0);
-
-;
-            }
-            
+        while (choice !=y)
+        {
+            Console.WriteLine("Try again");
+            choice = int.Parse(Console.ReadLine());
         }
+        Console.WriteLine("You win");
     }
-}
+  }
